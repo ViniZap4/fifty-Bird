@@ -1,16 +1,4 @@
--- import libs
-
--- https://github.com/vrld/hump/blob/master/class.lua
-Class = require "libs/class"
-
--- https://github.com/Ulydev/push
-push = require "libs/push"
-
--- import components
-require 'components/font'
-require 'components/audio'
-require "components/images"
-
+require "components/imports"
 
 -- import images and respective scroll variables
 
@@ -28,6 +16,7 @@ local BACKGROUND_LOOPING_POINT = 413
 
 -- Set screen dimensions
 
+-- screen
 WINDOW_WIDTH = 1280
 WIDOW_HEIGHT = 720
 
@@ -69,6 +58,9 @@ function love.load()
   )
 
 
+  -- init with title state
+  gameState:change('title')
+
 end
 
 function love.keypressed(key)
@@ -83,14 +75,20 @@ function love.update(dt)
 
   backgroundScroll = (backgroundScroll + BACKGROUND_SCROLL_SPEED * dt) % BACKGROUND_LOOPING_POINT
   groundScroll = (groundScroll + GROUND_SCROLL_SPEED * dt) % VIRTUAL_WIDTH
+
+  gameState:update(dt) 
   
+
 end
 
 function love.draw()
-  push:start()
+  push:start() 
+ 
   love.graphics.draw(background, -backgroundScroll, 0)
-  love.graphics.draw(ground, -groundScroll, VIRTUAL_HEIGHT - 16)
 
+  gameState:render()
+
+  love.graphics.draw(ground, -groundScroll, VIRTUAL_HEIGHT - 16)
 
   push:finish()
 end

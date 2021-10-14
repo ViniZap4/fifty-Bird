@@ -8,6 +8,15 @@ function Font:set(namefont)
   love.graphics.setFont(namefont)
 end
 
+function Font:printf(text, x,y,font)
+  Font:set(font)
+	love.graphics.printf(
+		text
+		, x, y,
+		 VIRTUAL_WIDTH,
+		'center'
+	)
+end
 
 -- import fonts
 
