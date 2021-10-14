@@ -1,4 +1,4 @@
-TitleScreenState = Class{__includes = BaseState}
+TitleScreenState = createState()
 
 function TitleScreenState:init()
 	-- void

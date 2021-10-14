@@ -12,9 +12,9 @@ function Font:printf(text, x,y,font)
   Font:set(font)
 	love.graphics.printf(
 		text
-		, x, y,
-		 VIRTUAL_WIDTH,
-		'center'
+    ,x,y,
+      VIRTUAL_WIDTH,
+    'center'
 	)
 end
 

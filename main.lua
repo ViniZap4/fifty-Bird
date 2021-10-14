@@ -57,7 +57,6 @@ function love.load()
     }
   )
 
-
   -- init with title state
   gameState:change('title')
 

@@ -38,6 +38,10 @@ function StateMachine:render()
   self.current:render()
 end
 
+function createState()
+ return Class{__includes = BaseState}
+end
+
 -- set sate machine with functions
 gameState = StateMachine {
   ['title'] = function() return TitleScreenState() end,
