@@ -20,3 +20,6 @@ require 'states/CountdownState'
 require 'states/PlayState'
 require 'states/ScoreState'
 require 'states/TitleScreenState'
+
+-- import classes
+require "classes/bird"
