@@ -64,11 +64,19 @@ end
 
 function love.keypressed(key)
   
+  -- add keys pressed 
+  Input.keypressed[key] = true
+
   if key == "escape" then 
     love.event.quit()
   end
 
 end
+
+function love.mousepressed(x, y, button)
+  Input.mousePressed[button] = true
+end
+
 
 function love.update(dt)
 
@@ -77,7 +85,8 @@ function love.update(dt)
 
   gameState:update(dt) 
   
-
+  Input.keypressed = {}
+  Input.mousePressed = {}
 end
 
 function love.draw()

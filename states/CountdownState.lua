@@ -3,7 +3,7 @@ CountdownState  = createState()
 COUNTDOWN_TIME = 0.75
 
 function CountdownState:init()
-	self.count = 3  
+	self.count = 5  
 	self.timer  = 0
 end
 

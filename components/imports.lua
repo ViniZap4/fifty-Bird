@@ -10,6 +10,7 @@ push = require "libs/push"
 require 'components/font'
 require 'components/audio'
 require "components/images"
+require "components/input"
 
 -- import state machine 
 require 'components/StateMachine'

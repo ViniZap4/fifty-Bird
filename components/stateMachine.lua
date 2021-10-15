@@ -42,7 +42,7 @@ function createState()
  return Class{__includes = BaseState}
 end
 
--- set sate machine with functions
+-- set state machine with functions
 gameState = StateMachine {
   ['title'] = function() return TitleScreenState() end,
   ['countdown'] = function() return CountdownState() end,

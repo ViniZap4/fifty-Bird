@@ -12,7 +12,7 @@ function PlayState:init()
 end
 
 function PlayState:update(dt)
-
+  self.bird:update(dt)
 end
 
 function PlayState:render()
