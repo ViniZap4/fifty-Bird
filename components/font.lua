@@ -13,8 +13,16 @@ function Font:printf(text, x,y,font)
 	love.graphics.printf(
 		text
     ,x,y,
-      VIRTUAL_WIDTH,
+    VIRTUAL_WIDTH,
     'center'
+	)
+end
+
+function Font:print(text, x,y,font)
+  Font:set(font)
+	love.graphics.print(
+		text
+    ,x,y
 	)
 end
 

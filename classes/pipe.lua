@@ -1,7 +1,7 @@
 Pipe = Class()
 
-function Pipe:init(orientation. y)
-  self.image = Img.new("pipe.png")
+function Pipe:init(orientation, y)
+  self.image = Img:new("pipe.png")
   self.x = VIRTUAL_WIDTH + 60
   self.y = y
 

@@ -24,3 +24,5 @@ require 'states/TitleScreenState'
 
 -- import classes
 require "classes/bird"
+require "classes/pipe"
+require "classes/PipePair"
